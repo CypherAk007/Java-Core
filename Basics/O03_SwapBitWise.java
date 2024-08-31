@@ -25,7 +25,7 @@ public class O03_SwapBitWise {
 
         float z = 12.2f;
         x= (byte)z;
-        System.out.println(x,);
+        System.out.println(x);
 
     }
 }
