@@ -54,7 +54,7 @@ public class O013_AbstractClasses {
         Super s1 = new Sub();
         s1.meth1();
         s1.meth2();
-
+        Animal d[] = new Animal[100];
         Dog dog = new Dog("Buddy"); // This will invoke Animal's constructor
         dog.makeSound();
         dog.sleep();
