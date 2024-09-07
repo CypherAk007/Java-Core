@@ -1,7 +1,7 @@
 package ObjectOriented;
 
 class ATM{
-    public void checkBalance(String name){
+    synchronized public void checkBalance(String name){
         System.out.println(name+"Checking");
         try{
             Thread.sleep(1000);
@@ -10,7 +10,7 @@ class ATM{
         System.out.println("Balance");
     }
 
-    public void withdraw(String name,int amount){
+    synchronized public void withdraw(String name,int amount){
         System.out.println(name+" Withdrawing ");
         try{
             Thread.sleep(1000);
