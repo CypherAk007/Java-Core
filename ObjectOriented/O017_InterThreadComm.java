@@ -3,6 +3,10 @@ package ObjectOriented;
 class MyData{
     int value;
     boolean flag=true;
+
+    // Double d =Double.valueOf("123.3");
+    // Double d2 = 123.3;
+    // Float f = Float.valueOf(12.3f);
     synchronized public void set(int v){
         while(flag!=true){
             try{
@@ -66,7 +70,6 @@ class Consumer extends Thread{
             value = d.get();
             System.out.println("Consumer "+value);
         }
-
     }
 }
 
