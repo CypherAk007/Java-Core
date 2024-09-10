@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-class Student {
+class Student implements Comparable<Student>{
     String name;
     int rollNo;
 
@@ -32,6 +32,16 @@ class Student {
         return rollNo==student.rollNo;
         
     }
+
+    @Override
+    public int compareTo(Student that) {
+    //    +ve -> this object is returned
+    //    -ve -> that object is returned
+    //    0 -> both are equal 
+
+    return this.rollNo-that.rollNo;
+    }
+    // s1.compareTo(s2);
 }
 
 public class O26_CustomSet {
