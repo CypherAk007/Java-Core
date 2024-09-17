@@ -9,14 +9,54 @@ public class O29_CollectionsClass {
     public static void main(String[] args) {
         List<Integer> l = new ArrayList<>();
         l.add(34);
-        l.add(33);
-        l.add(32);
-        l.add(31);
+        l.add(43);
+        l.add(52);
+        l.add(61);
         l.add(30);
         Collections.sort(l, Comparator.reverseOrder());
         System.out.println(l);
         Collections.sort(l);
         System.out.println(l);
+        //  compare based on last digit 
+        Comparator<Integer> com = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer i,Integer j){
+                if(i%10>j%10){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            }
+        };
+        Collections.sort(l,com);
+        System.out.println(l);
+
+        List<String> ls = new ArrayList<>();
+        ls.add("ak");
+        ls.add("bk");
+        ls.add("abc");
+        ls.add("abhishek");
+        ls.add("dk");
+        ls.add("ck");
+        Collections.sort(ls, Comparator.reverseOrder());
+        System.out.println(ls);
+        Collections.sort(ls);
+        System.out.println(ls);
+        Comparator<String> cs = new Comparator<String>() {
+            @Override
+            public int compare(String i, String j){
+                if(i.length()>j.length()){
+                    return 1;
+                }else if(i.length()==j.length()){
+                    return 0;
+                }else{
+                    return -1;
+                }
+            }
+        };
+
+        Collections.sort(ls,cs);
+        System.out.println(ls);
 
         // Compare Custom Students class objects
         List<Student> list = new ArrayList<Student>();
@@ -39,7 +79,6 @@ public class O29_CollectionsClass {
         Collections.sort(list,
                 (Student o1, Student o2) -> {
                     return o1.name.compareTo(o2.name);
-
                 });
         System.out.println(list);
 
