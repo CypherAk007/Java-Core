@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -42,15 +43,16 @@ public class O29_CollectionsClass {
         System.out.println(ls);
         Collections.sort(ls);
         System.out.println(ls);
+        System.out.println("-------------");
         Comparator<String> cs = new Comparator<String>() {
             @Override
             public int compare(String i, String j){
                 if(i.length()>j.length()){
-                    return 1;
+                    return -1;
                 }else if(i.length()==j.length()){
                     return 0;
                 }else{
-                    return -1;
+                    return 1;
                 }
             }
         };
@@ -81,6 +83,25 @@ public class O29_CollectionsClass {
                     return o1.name.compareTo(o2.name);
                 });
         System.out.println(list);
+
+        // Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
+        // Comparator<int[]> com = new Comparator<int[]>() {
+        //     @Override
+        //     public int compare(int[] i1, int[] i2) {
+        //         return Integer.compare(i1[0], i2[0]);
+        //     }
+        // };
+        
+        // Arrays.sort(intervals, com);
+
+        // sort based on a0,b0 and a1,b1
+        // Arrays.sort(intervals,(a,b)-> { 
+        //     if (a[0]!=b[0]){
+        //         return Integer.compare(a[0],b[0]);
+        //     }else{
+        //         return Integer.compare(a[1],b[1]);
+        //     }
+        // });
 
     }
 }
