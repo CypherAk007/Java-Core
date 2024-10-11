@@ -39,7 +39,6 @@ public class ExecutorsServiceDemo {
 
         // Above method does not return response as run method return void 
         Executor e = Executors.newFixedThreadPool(3);
-
         // // Lambda expression 
         Runnable r = ()-> System.out.println(Thread.currentThread().getName());
         // e.submit();
