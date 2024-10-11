@@ -8,9 +8,9 @@ import java.util.concurrent.Future;
 public class Client {
     public static void main(String[] args) throws Exception{
         List<Integer> arr = List.of(6,4,3,8,2,1,10);
-        MergeSorter mergeSorter = new MergeSorter(arr);
-//        List<Integer> sortedData = mergeSorter.call();
         ExecutorService executorService = Executors.newCachedThreadPool();
+        MergeSorter mergeSorter = new MergeSorter(arr,executorService);
+//        List<Integer> sortedData = mergeSorter.call();
         Future<List<Integer>>  sortedDataFuture = executorService.submit(mergeSorter);
 
         List<Integer> sortedData = sortedDataFuture.get(); // Blocking call waits of response
