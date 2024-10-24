@@ -41,6 +41,7 @@ public class MergeSorter implements Callable<List<Integer>>{
 //        List<Integer> rightSortedArray = rightMergeSorter.call();
 
 //        Insted of directly call in the left and right mergesort, call via threads
+//        we are exe the left half and right half on different threads
         Future<List<Integer>> leftSortedArrayFuture = executorService.submit(leftMergeSorter);
         Future<List<Integer>> rightSortedArrayFuture = executorService.submit(rightMergeSorter);
 
