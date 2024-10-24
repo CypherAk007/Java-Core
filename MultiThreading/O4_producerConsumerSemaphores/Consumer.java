@@ -24,10 +24,10 @@ public class Consumer implements Runnable {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            if(!store.isEmpty()){
+//            if(!store.isEmpty()){
                 System.out.println("Consumer "+name+" is consuming. Current store size is "+store.size());
                 store.remove();
-            }
+//            }
             producerSemaphore.release();
         }
     }

@@ -14,9 +14,9 @@ public class Client {
         Semaphore producerSemaphore = new Semaphore(maxSizeOfStore);
         Semaphore consumerSemaphore = new Semaphore(0);
 
-        executorService.submit(new Producer("P1",store,6,producerSemaphore,consumerSemaphore));
-        executorService.submit(new Producer("P2",store,6,producerSemaphore,consumerSemaphore));
-        executorService.submit(new Producer("P3",store,6,producerSemaphore,consumerSemaphore));
+        executorService.submit(new Producer("P1",store,producerSemaphore,consumerSemaphore));
+        executorService.submit(new Producer("P2",store,producerSemaphore,consumerSemaphore));
+        executorService.submit(new Producer("P3",store,producerSemaphore,consumerSemaphore));
 
         executorService.submit(new Consumer("C1",store,producerSemaphore,consumerSemaphore));
         executorService.submit(new Consumer("C2",store,producerSemaphore,consumerSemaphore));
