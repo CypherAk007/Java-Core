@@ -1,11 +1,13 @@
 package MultiThreading.O5_AdderSubtractorLocks;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Client {
     public static void main(String[] args) throws InterruptedException {
-        Counter counter = new Counter(0);
+        AtomicInteger atomicInteger = new AtomicInteger(0);
+        Counter counter = new Counter(atomicInteger);
 
         Lock lock = new ReentrantLock();
 

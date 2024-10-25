@@ -14,9 +14,10 @@ public class Adder implements Runnable{
     @Override
     public void run(){
         for(int i=1;i<=10000;i++){
-            lock.lock();
-            counter.setValue(counter.getValue()+i);
-            lock.unlock();
+//            lock.lock();
+            counter.getValue().addAndGet(i);
+//            counter.setValue(counter.getValue()+i);
+//            lock.unlock();
         }
     }
 

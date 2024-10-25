@@ -1,15 +1,17 @@
 package MultiThreading.O5_AdderSubtractorLocks;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Counter {
-    private int counter;
-    public Counter(int counter){
+    private AtomicInteger counter;
+    public Counter(AtomicInteger counter){
         this.counter = counter;
     }
-    public int getValue(){
+    public AtomicInteger getValue(){
         return this.counter;
     }
 
-    public void setValue(int value){
+    public void setValue(AtomicInteger value){
         this.counter=value;
     }
 }
