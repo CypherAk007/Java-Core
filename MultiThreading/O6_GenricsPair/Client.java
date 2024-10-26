@@ -6,7 +6,7 @@ public class Client {
         Pair<String,String> message = new Pair<>("Vishal","Hello World");
         Pair<Integer,String> student = new Pair<>(1, "Vishal");
 
-        String first = message.geFirst();
+        String first = message.getFirst();
         System.out.println(first.length());
         
     }

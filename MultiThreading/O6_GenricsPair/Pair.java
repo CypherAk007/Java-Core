@@ -1,6 +1,6 @@
 package MultiThreading.O6_GenricsPair;
 
-public class Pair <FIRST,SECOND>{
+public class Pair <FIRST,SECOND> implements IPair<FIRST,SECOND>{
     private FIRST first;
     private SECOND second;
 
@@ -9,7 +9,7 @@ public class Pair <FIRST,SECOND>{
         this.second = second;
     }
 
-    public FIRST geFirst(){
+    public FIRST getFirst(){
         return first;
     }
 
