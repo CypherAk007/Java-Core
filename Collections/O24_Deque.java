@@ -7,7 +7,7 @@ public class O24_Deque {
         ArrayDeque<Integer> ad = new ArrayDeque<>();
         ad.offerFirst(1); // insert at head
         ad.offerLast(2); // ~ insert at tail ad.offer
-        ad.offer(3);
+        ad.offer(3);///insert at tail ad.offer
         System.out.println(ad);
 
         System.out.println(ad.peek());

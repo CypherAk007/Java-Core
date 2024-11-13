@@ -8,8 +8,8 @@ public class ClientForCustomException {
         Pair p1 = new Pair("A","B");
         System.out.println(p1);
 //
-        Pair p2 = new Pair(null,null);
-        System.out.println(p2);
+//        Pair p2 = new Pair(null,null);
+//        System.out.println(p2);
 
         Pair p3 = new Pair(1,2);
         System.out.println(p3);
@@ -24,13 +24,18 @@ public class ClientForCustomException {
 //              Null value not allowed!!. -> is from custom class-> super("Null value not allowed!!.");
 //              Alerting it
 
-        }catch (ClassCastException e){
-            System.out.println(e.getMessage());
         }
+//        catch (ClassCastException e){
+//            System.out.println(e.getMessage());
+//        }
 //        Combining exceptions
 //        catch (NullValuesNotAllowedException | ClassCastException exception){
 //            System.out.println(exception.getMessage());
 //        }
+        finally {
+//            Even if exception is there print somthing
+            System.out.println("GoodBye!!");
+        }
 
         System.out.println("End of program!!");
 
