@@ -2,6 +2,7 @@ package Lambdas.O3_MathOperationsAdvLambdas;
 
 public class Client {
     public static void main(String[] args) {
+//        Passing Method as Reference
 //        M1 -> Using the return lambda from a function as a reference
         System.out.println(execute(3,4,Operations.add()));
 //        THIS IS SAME AS THIS

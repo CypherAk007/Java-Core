@@ -46,6 +46,7 @@ public class Client {
     }
 
 //    CUSTOM PRINT FUNCTION
+//    Also a CONSUMER IN INBUILT FNC INTERFACE WHICH TAKES ARG AND RETURN VOID
     private static <T> void print(T object){
         System.out.println(object);
     }

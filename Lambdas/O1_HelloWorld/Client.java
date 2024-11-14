@@ -6,6 +6,8 @@ import java.util.concurrent.Executors;
 
 public class Client {
     public static void main(String[] args) {
+//        Q1: HELLO WORLD PRINTER  PRINT HELLO WORLD USING THREAD
+
         HelloWorldPrinter helloWorldPrinter = new HelloWorldPrinter();
 //        M1 - Using thread class to execute thread
         Thread thread = new Thread(helloWorldPrinter);
