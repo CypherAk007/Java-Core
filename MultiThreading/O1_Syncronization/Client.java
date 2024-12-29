@@ -29,7 +29,7 @@ public class Client {
 //        t4.start();
 //        ---------------------------------------
 
-        //        M3-> using Synchronized block and Mehthod
+        //        M3-> using Synchronized block and Method
         MyDataSync mds = new MyDataSync();
         MyThread1Sync t1 = new MyThread1Sync(mds);
         MyThread2Sync t2 = new MyThread2Sync(mds);

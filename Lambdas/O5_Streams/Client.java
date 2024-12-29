@@ -20,7 +20,7 @@ public class Client {
 
 
 
-
+//QUESTION : PRINT THE NUMBERS FROM THE LIST
 
 //        Do operation using stream api
 //        we have passed lambda in for each

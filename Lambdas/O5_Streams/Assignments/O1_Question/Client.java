@@ -39,8 +39,6 @@ public class Client {
                 .map(Client::squareClass)
                 .forEach(System.out::println);
 
-
-
     }
 
     private void question1Obj(){
